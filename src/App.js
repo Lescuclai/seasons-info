@@ -25,6 +25,7 @@ function App() {
       <div style={{ display: "flex", flexDirection: "column" }}>
         <span>depuis</span>
         <span>{currentSeasonSince}</span>
+        <span>test</span>
       </div>
       <div style={{ margin: "2rem 0" }}>
         <Button
