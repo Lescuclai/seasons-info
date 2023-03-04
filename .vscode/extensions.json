@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "yutengjing.vscode-colorize-plus",
+    "pranaygp.vscode-css-peek",
+    "github.vscode-pull-request-github",
+    "ms-vsliveshare.vsliveshare",
+    "burkeholland.simple-react-snippets"
+  ]
+}
