@@ -1,9 +1,9 @@
 import { Modal, Box, Typography } from "@mui/material";
-import logo from "../logo.svg";
-import useModalForNextSeason from "./useModalForNextSeason";
+import logo from "../../logo.svg";
+import getNextSeason from "./getNextSeason";
 
 function ModalForNextSeason({ open, handleClose }) {
-  const { seasonDuration, nextSeasonDistance } = useModalForNextSeason();
+  const { seasonDuration, nextSeasonDistance } = getNextSeason();
 
   const modalstyle = {
     position: "absolute",
@@ -28,16 +28,17 @@ function ModalForNextSeason({ open, handleClose }) {
     <Modal
       open={open}
       onClose={handleClose}
-      aria-labelledby='modal-modal-title'
-      aria-describedby='modal-modal-description'>
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
       <Box style={modalstyle}>
-        <div className='flex-center'>
-          <img src={logo} className='App-logo' alt='logo' />
+        <div className="flex-center">
+          <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <Typography id='modal-modal-title' variant='h6' component='h2'>
+        <Typography id="modal-modal-title" variant="h6" component="h2">
           Printemps
         </Typography>
-        <Typography id='modal-modal-description' style={textContainer}>
+        <Typography id="modal-modal-description" style={textContainer}>
           <span>{seasonDuration}</span>
           <span>dans</span>
           <span>{nextSeasonDistance}</span>

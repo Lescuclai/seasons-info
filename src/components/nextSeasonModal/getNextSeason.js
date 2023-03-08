@@ -11,9 +11,9 @@ import {
   FALL_DATE,
   WINTER_DATE,
   seasons,
-} from "./data";
+} from "../../data";
 
-function useModalForNextSeason() {
+function getNextSeason() {
   const getCurrentSeason = () => {
     if (CURRENT_DATE < SPRING_DATE) {
       return "winter";
@@ -119,4 +119,4 @@ function useModalForNextSeason() {
   };
 }
 
-export default useModalForNextSeason;
+export default getNextSeason;
