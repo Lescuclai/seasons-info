@@ -32,14 +32,14 @@ function useModalForNextSeason() {
 
   const getNextSeasonStartDate = (currentSeason) => {
     let nextSeason = "";
-    Object.entries(seasons).map(([key, value]) => {
+    Object.entries(seasons).forEach(([key, value]) => {
       if (key === currentSeason) {
         nextSeason = value.nextSeason;
       }
     });
 
     let startDate = "";
-    Object.entries(seasons).map(([key, value]) => {
+    Object.entries(seasons).forEach(([key, value]) => {
       if (key === nextSeason) {
         startDate = value.startDay;
       }
@@ -60,7 +60,7 @@ function useModalForNextSeason() {
 
   const getCurrentSeasonSince = (currentSeason, seasons) => {
     let startDate = "";
-    Object.entries(seasons).map(([key, value]) => {
+    Object.entries(seasons).forEach(([key, value]) => {
       if (key === currentSeason) {
         startDate = format(value.startDay, "yyyy,M,d");
       }
@@ -77,7 +77,7 @@ function useModalForNextSeason() {
   const getSeasonDuration = (seasonName) => {
     let seasonDuration = "";
 
-    Object.entries(seasons).map(([key, value]) => {
+    Object.entries(seasons).forEach(([key, value]) => {
       if (key === seasonName) {
         seasonDuration = {
           seasonStartDate: value.startDay,
@@ -88,7 +88,7 @@ function useModalForNextSeason() {
 
     let nextSeasonStartDate = "";
 
-    Object.entries(seasons).map(([key, nextSeasonvalue]) => {
+    Object.entries(seasons).forEach(([key, nextSeasonvalue]) => {
       if (key === seasonDuration.nextSeason) {
         nextSeasonStartDate = nextSeasonvalue.startDay;
       }

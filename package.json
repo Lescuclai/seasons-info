@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "preinstall": "git config core.hooksPath gitHooks"
+    "preinstall": "git config core.hooksPath gitHooks",
+    "lint": "npx eslint --fix .",
+    "format": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
