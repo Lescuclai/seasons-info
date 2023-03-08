@@ -2,13 +2,13 @@ import { useState, lazy } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "@mui/material";
-import useModalForNextSeason from "./components/useModalForNextSeason";
+import getNextSeason from "./components/nextSeasonModal/getNextSeason";
 const ModalForNextSeason = lazy(() =>
-  import("./components/ModalForNextSeason")
+  import("./components/nextSeasonModal/ModalForNextSeason")
 );
 
 function App() {
-  const { currentSeasonSince, currentSeason } = useModalForNextSeason();
+  const { currentSeasonSince, currentSeason } = getNextSeason();
 
   const [open, setOpen] = useState(false);
   function handleOpen() {
@@ -19,22 +19,20 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <img src={logo} className='App-logo' alt='logo' />
+    <div className="App">
+      <img src={logo} className="App-logo" alt="logo" />
       <h2>{currentSeason}</h2>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <span>depuis</span>
         <span>{currentSeasonSince}</span>
-        <span>testghfbgfhnbgdchnbfdhn </span>
-        <span>testghfbgfhnbgdchnbfdhn </span>
-        <span>testghfbgfhnbgdchnbfdhn </span>
       </div>
       <div style={{ margin: "2rem 0" }}>
         <Button
-          variant='outlined'
+          variant="outlined"
           style={{ textTransform: "capitalize" }}
-          onClick={handleOpen}>
-          Et après ?{/* {'toto'} */}
+          onClick={handleOpen}
+        >
+          Et après ?
         </Button>
         <ModalForNextSeason open={open} handleClose={handleClose} />
       </div>
