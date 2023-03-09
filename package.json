@@ -10,7 +10,7 @@
     "firebase-tools": "^11.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "preinstall": "git config core.hooksPath gitHooks",
     "lint": "npx eslint --fix .",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
